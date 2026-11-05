@@ -1,0 +1,41 @@
+LABORATORIO DE REBOTE - COMO EJECUTARLO
+=======================================
+
+Esta carpeta (kit-alumno) ya tiene TODO: el kit del profe + el juego.
+No hay que juntar nada. Clase que se ejecuta: juego.Main (src/juego/Main.java)
+
+IMPORTANTE: ponela en una ruta SIN espacios ni tildes, por ejemplo C:\kit-alumno
+(el compilar.bat del kit falla con rutas que tienen espacios).
+
+OPCION 1 - Doble click / terminal (la mas facil)
+  Windows:      jugar.bat
+  Linux / Mac:  ./jugar.sh
+  (compila de cero y abre el juego)
+
+OPCION 2 - Con los scripts del kit
+  Windows:      compilar.bat      y despues      ejecutar.bat juego.Main
+  Linux / Mac:  ./compilar.sh     y despues      ./ejecutar.sh juego.Main
+  Sin "juego.Main" abre la demo del kit, no el juego.
+
+OPCION 3 - Visual Studio Code
+  1. Instalar el JDK 11 o superior y la extension "Extension Pack for Java".
+  2. File > Open Folder > elegir la carpeta kit-alumno (la que contiene "src").
+  3. Abrir src/juego/Main.java y tocar "Run" arriba de main (o F5).
+
+VERIFICAR LAS ESTRUCTURAS (10 puntos de la rubrica)
+  Windows:      ejecutar.bat verificador.PruebaMisEstructuras
+  Linux / Mac:  ./ejecutar.sh verificador.PruebaMisEstructuras
+  Resultado esperado: Lista 36/36, Pila 23/23, Cola 22/22  -> OK
+
+CONTROLES
+  Mouse: apuntar (los puntitos muestran la trayectoria).  Click: lanzar.
+  ESC: terminar la partida.  ENTER: jugar / repetir.
+
+CAMBIOS AL KIT (avisarle al docente)
+  1) src/estructuras/Lista.java: el kit traia la interfaz SIN iterator, contiene
+     ni quitar, pero ListaBase.java y motor/Mundo.java del propio kit YA los usan,
+     asi que el kit no compilaba ("method does not override..." y "cannot find
+     symbol iterator()"). Se agrego "extends Iterable<T>", contiene y quitar.
+     MiLista funciona tanto con esa version como con la original.
+  2) src/verificador/PruebaMisEstructuras.java: se descomentaron las 3 lineas
+     (ese archivo si se puede editar).
